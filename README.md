@@ -8,3 +8,4 @@ This is the Pytorch implementation of the paper "Alzheimer’s disease progressi
 
 ## Proposed Framework
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/proposed_framework.png
+https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/proposed_framework.png?raw=true
