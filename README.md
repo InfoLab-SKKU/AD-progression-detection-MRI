@@ -7,4 +7,4 @@ This is the Pytorch implementation of the paper "Alzheimer’s disease progressi
 * [NiBabel](https://nipy.org/nibabel/)
 
 ## Proposed Framework
-(https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/proposed_framework.png)
+https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/proposed_framework.png
