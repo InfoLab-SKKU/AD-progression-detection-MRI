@@ -1,5 +1,4 @@
-# AD-progression-detection-MRI
-# Alzheimer disease progression detection from longitudional MRI
+## Alzheimer disease progression detection from longitudional MRI
 This is the Pytorch implementation of the paper "Alzheimer’s progression detection based on multimodal deep learning model and visual explainability of time series data ". 
 
 ## Prerequisites
