@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import torch
 from torch import nn
 from torch.utils.data import Dataset
@@ -26,22 +20,14 @@ import warnings
 warnings.filterwarnings('ignore')
 GPU = 2
 
-
-# In[2]:
-
-
 def process_scan(path):
     return np.load(path)
-
 
 normal_scan_paths = glob.glob('/home/ubuntu/nasir/pytorch_3d_resnet_data/single_step_with_oversampling/1.CN/*.*')
 abnormal_scan_paths = glob.glob('/home/ubuntu/nasir/pytorch_3d_resnet_data/single_step_with_oversampling/2.AD_/*.*')
 all_pths = normal_scan_paths + abnormal_scan_paths
-
 standardize_features = '/home/ubuntu/nasir/pytorch_3d_resnet_data/single_step_with_oversampling/standardized_features_with_oversampling.csv'
-
 df = pd.read_csv(standardize_features)
-
 features = []
 for indx, pth in enumerate(all_pths):
     split_str = pth.split('/')[-1].split('_MR')[0].split('_')[2:]
@@ -51,42 +37,27 @@ for indx, pth in enumerate(all_pths):
         if sub_num == pid:
             entire_row = df.loc[ind]
             features.append(entire_row)
-
 all_labels = []
 for p in all_pths:
     if '1.CN' in p:
         all_labels.append(0)
     if '2.AD' in p:
         all_labels.append(1)
-
 class Dataset_Early_Fusion(Dataset):
-    def __init__(self, df, indices):
-       
+    def __init__(self, df, indices):       
         self.paths = df['path']
-        self.label = df['label']        
-        
-        self.all_features_df = pd.read_csv(standardize_features)
-        
-        self.all_features_df = self.all_features_df.fillna(0)
-        
+        self.label = df['label']      
+        self.all_features_df = pd.read_csv(standardize_features)        
+        self.all_features_df = self.all_features_df.fillna(0)        
         columns_to_drop = ["Unnamed: 0", "Subject_id"]        
-        self.features_df = self.all_features_df.drop(columns=columns_to_drop)   
-        
+        self.features_df = self.all_features_df.drop(columns=columns_to_drop)       
     def __len__(self):
-        return len(self.paths)
-    
-    def __getitem__(self,idx):     
-
+        return len(self.paths)    
+    def __getitem__(self,idx):
         features_row = self.features_df.iloc[[idx]].values.tolist()      
         volume = np.load(self.paths[idx])   
         label = self.label[idx]
-        return volume, torch.tensor(features_row), int(label)   
-    
-
-
-# In[3]:
-
-
+        return volume, torch.tensor(features_row), int(label)     
 class RNN(nn.Module):
     def __init__(self, input_size, sequence_length, hidden_size, num_layers, num_classes):
         super(RNN, self).__init__()
@@ -94,14 +65,12 @@ class RNN(nn.Module):
         self.num_layers = num_layers * 2
         self.rnn = nn.RNN(input_size, hidden_size, num_layers, batch_first=True, bidirectional=True)
         self.dropout_layer = nn.Dropout(0.7)        
-
     def forward(self, x):
         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(device) 
         out, _ = self.rnn(x, h0)
         out = out.reshape(out.shape[0], -1)
         out = self.dropout_layer(out)
         return out
-    
 class VGG3D13(nn.Module):
     def __init__(self, num_classes=2, input_shape=(1,110,110,110)): 
         super(VGG3D13, self).__init__()
