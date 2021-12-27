@@ -11,3 +11,6 @@ https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/pr
 
 ## work flow
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true
+
+## Data:
+Please save the MRI ".npy" data into CN and AD folders, respectively. You can use the "data preprocessing/Baseline_volumes.py" or other python file to prepare the data accordingly.
