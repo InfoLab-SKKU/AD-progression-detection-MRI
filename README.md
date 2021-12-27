@@ -9,7 +9,7 @@ This is the Pytorch implementation of the paper "Alzheimer’s disease progressi
 ## Proposed Framework:
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/proposed_framework.png
 
-## work flow:
+## Work flow:
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true
 
 ## Activated brain regions in longitudional MRI data
