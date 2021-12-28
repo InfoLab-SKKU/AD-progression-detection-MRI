@@ -7,6 +7,8 @@ This is the Pytorch implementation of the paper "Alzheimer’s disease progressi
 * [NiBabel](https://nipy.org/nibabel/)
 
 ## Proposed Framework:
+The proposed framework (3D-CNN-BRNN) is composed of four stages. Stage 1 shows the image preprocessing step which includes reorientation of the input volume to standard space, intensity inhomogeneity (bias field) correction, MNI template space registration, and skull stripping. Stage 2 is 3D CNN module to extract deep features for the input 3D MRI volume. Extracted features are then forwarded to Stage 3 that is bidirectional RNN to capture the temporal features from the extracted sequences in Stage 2. In stage 4 visual explanation to spatial and temporal features are provided. This step further validates the generalization of the proposed network that is medically acceptable from the domain expert.
+
 <img src="images/proposed_framework.png" width="700">
 
 ## Work flow:
