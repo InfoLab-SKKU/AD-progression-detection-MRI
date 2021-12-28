@@ -10,7 +10,7 @@ This is the Pytorch implementation of the paper "Alzheimer’s disease progressi
 <img src="images/proposed_framework.png" width="700">
 
 ## Work flow:
-<img src="images/workflow.png" width="730">
+<img src="images/workflow.png" width="710">
 
 ## Activated brain regions in longitudional MRI data
 <img src="images/ExplainabilityFigure.png" width="700">
