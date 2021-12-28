@@ -12,6 +12,8 @@ https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/pr
 
 ## Work flow:
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true
+<img src="images/workflow.png">
+
 
 ## Activated brain regions in longitudional MRI data
 https://raw.githubusercontent.com/InfoLab-SKKU/AD-progression-detection-MRI/main/images/ExplainabilityFigure.PNG
