@@ -12,12 +12,12 @@ https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/pr
 
 ## Work flow:
 https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true
-<img src="images/workflow.png">
+<img src="images/workflow.png" width="700">
 
 
 ## Activated brain regions in longitudional MRI data
 https://raw.githubusercontent.com/InfoLab-SKKU/AD-progression-detection-MRI/main/images/ExplainabilityFigure.PNG
-<img src="images/ExplainabilityFigure.png">
+<img src="images/ExplainabilityFigure.png" width="700">
 
 ## Data:
 Please save the MRI ".npy" data into CN and AD folders, respectively. You can use the "data preprocessing/Baseline_volumes.py" for the baseline or "data preprocessing/BaselineMRI+M06MRI_volumes(two_timesteps).py" or BaselineMRI+M06MRI+M12MRI_volumes(three_timesteps).py" to prepare the data for multiple timesteps accordingly.
