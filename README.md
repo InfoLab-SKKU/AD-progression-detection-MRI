@@ -11,7 +11,8 @@ https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/pr
 <img src="images/proposed_framework.png" width="700">
 
 ## Work flow:
-https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true
+<!--- https://github.com/InfoLab-SKKU/AD-progression-detection-MRI/blob/main/images/workflow.png?raw=true --->
+
 <img src="images/workflow.png" width="730">
 
 
