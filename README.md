@@ -22,3 +22,19 @@ Please save the MRI ".npy" data into CN and AD folders, respectively. You can us
 
 ## Training-Testing:
 After data preparation, any model (Proposed network, 3DVGG, 3DResNet) with any data combination can be trained and test with the provided code. Such as code for traininig-testing  proposed network with the baseline MRI data can be found in directory "ProposedNet/ProposedNet_at_BaselineMRI.py".  
+
+
+## Citation
+We would appreciate if you consider citing our work when using our code.
+
+```bibtex
+@article{RAHIM2023363,
+title = {Prediction of Alzheimer's progression based on multimodal Deep-Learning-based fusion and visual Explainability of time-series data},
+journal = {Information Fusion},
+volume = {92},
+pages = {363-388},
+year = {2023},
+doi = {https://doi.org/10.1016/j.inffus.2022.11.028},
+author = {Nasir Rahim and Shaker El-Sappagh and Sajid Ali and Khan Muhammad and Javier {Del Ser} and Tamer Abuhmed}
+}
+```
